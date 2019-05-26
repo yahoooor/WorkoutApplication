@@ -49,8 +49,12 @@ class WorkoutActivity : BaseActivity() {
             intentAddExercise.putExtra(EXTRA_KEYS.WORKOUT_ID, mCurWorkoutId)
             startActivityForResult(intentAddExercise, REQUEST_CODE.ADD_EXERCISE.ordinal)
         }
-
-
+        val buttonStepCounter = findViewById(R.id.btnStepCounter) as Button
+        buttonStepCounter.setOnClickListener{
+            val intentStepCounter: Intent = Intent(this, StepCounterActivity::class.java)
+            // intentStepCounter.putExtra(EXTRA_KEYS.WORKOUT_ID, mCurWorkoutId)
+            startActivityForResult(intentStepCounter, REQUEST_CODE.STEP_COUNTER.ordinal)
+        }
 
         val buttonPrevWorkout = findViewById(R.id.btn_prev_workout) as ImageButton
         buttonPrevWorkout.setOnClickListener {
