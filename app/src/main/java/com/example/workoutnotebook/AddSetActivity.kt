@@ -16,7 +16,7 @@ import android.widget.Spinner
 import android.widget.AdapterView
 import android.widget.AdapterView.OnItemSelectedListener
 import kotlin.collections.ArrayList
-
+//test2
 //test
 class AddSetActivity : BaseActivity() {
     val TAG = "ADD_SET_ACT"
