@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/btnAddMeal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="4dp"
+        android:text="Add meal" />
+
+
+    <ListView
+        android:id="@+id/listViewCalories"
+        android:layout_width="match_parent"
+        android:layout_height="676dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="55dp"
+        android:headerDividersEnabled="true" />
+
+    <Button
+        android:id="@+id/btnCalendar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calendar" />
+
+    <TextView
+        android:id="@+id/tvDate"
+        android:layout_width="135dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="42dp"
+        android:layout_marginEnd="43dp"
+        android:layout_toStartOf="@+id/btnAddMeal"
+        android:layout_toEndOf="@+id/btnCalendar"
+        android:gravity="center"
+        android:text="21-05-2019"
+        android:textSize="25sp" />
+
+</RelativeLayout>
