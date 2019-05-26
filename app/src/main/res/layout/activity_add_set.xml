@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.workoutnotebook.AddSetActivity">
+
+    <android.support.v4.view.ViewPager
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <TextView
+        android:id="@+id/text_caption_previous_sets"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/text_size_default"
+        android:text="@string/text_caption_previous_sets"/>
+
+    <TextView
+        android:id="@+id/text_previous_sets"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/text_caption_previous_sets"
+        android:textSize="@dimen/text_size_small"
+        android:layout_marginStart="@dimen/text_margin"/>
+
+    <TextView
+        android:id="@+id/text_caption_current_sets"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text_caption_previous_sets"
+        android:textSize="@dimen/text_size_default"
+        android:text="@string/text_caption_current_sets"/>
+
+    <TextView
+        android:id="@+id/text_current_sets"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text_caption_previous_sets"
+        android:layout_toEndOf="@+id/text_caption_current_sets"
+        android:textSize="@dimen/text_size_small"
+        android:layout_marginStart="@dimen/text_margin"/>
+
+    <!--TODO: Relative layout workaround instead of using linear layout-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/linear_layout_reps"
+        android:layout_below="@+id/text_current_sets"
+        android:layout_marginTop="@dimen/activity_vertical_margin">
+
+        <ImageButton
+            android:id="@+id/btn_minus_rep"
+            android:layout_width="@dimen/btn_size"
+            android:layout_height="@dimen/btn_size"
+            android:scaleType="fitCenter"
+            android:contentDescription="@string/btn_desc_minus_rep"
+            app:srcCompat="@drawable/ic_remove_black_24dp"/>
+
+        <EditText
+            android:id="@+id/text_num_reps"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:hint="@string/hint_set_reps"
+            android:inputType="number"
+            android:textSize="@dimen/text_size_default"
+            android:layout_gravity="center_vertical"/>
+
+        <ImageButton
+            android:id="@+id/btn_add_rep"
+            android:layout_width="@dimen/btn_size"
+            android:layout_height="@dimen/btn_size"
+            android:scaleType="fitCenter"
+            android:contentDescription="@string/btn_desc_add_rep"
+            app:srcCompat="@drawable/ic_add_black_24dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/linear_layout_reps"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/btn_minus_weight"
+            android:layout_width="@dimen/btn_size"
+            android:layout_height="@dimen/btn_size"
+            android:scaleType="fitCenter"
+            android:contentDescription="@string/btn_desc_minus_weight"
+            app:srcCompat="@drawable/ic_remove_black_24dp"/>
+
+        <EditText
+            android:id="@+id/text_num_weight"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:hint="@string/hint_set_weight"
+            android:inputType="numberDecimal"
+            android:textSize="@dimen/text_size_default"
+            android:layout_gravity="center_vertical"/>
+
+        <Spinner
+            android:id="@+id/spinner_weight_unit"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight=".25"/>
+
+        <ImageButton
+            android:id="@+id/btn_add_weight"
+            android:layout_width="@dimen/btn_size"
+            android:layout_height="@dimen/btn_size"
+            android:scaleType="fitCenter"
+            android:contentDescription="@string/btn_desc_add_weight"
+            app:srcCompat="@drawable/ic_add_black_24dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        style="?android:attr/buttonBarStyle"
+        android:id="@+id/linearLayout">
+        <Button
+            android:id="@+id/btn_undo_set"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".6"
+            android:contentDescription="@string/btn_desc_undo_set"
+            android:text="@string/btn_text_undo_set"
+            android:textSize="@dimen/text_size_default"
+            style="?android:attr/buttonBarButtonStyle"/>
+        <Button
+            android:id="@+id/btn_save_set"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:contentDescription="@string/btn_desc_save_set"
+            android:text="@string/btn_text_save_set"
+            android:textSize="@dimen/text_size_default"
+            style="?android:attr/buttonBarButtonStyle"
+            />
+    </LinearLayout>
+
+</RelativeLayout>

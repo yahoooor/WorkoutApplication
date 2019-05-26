@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.workoutnotebook.WorkoutActivity">
+
+
+    <ListView
+        android:id="@+id/listViewWorkoutExercises"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <Button
+        android:id="@+id/btnStepCounter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Step counter" />
+
+    <Button
+        android:id="@+id/btnCalories"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Calories" />
+
+    <Button
+        android:id="@+id/btnAddExercise"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:enabled="true"
+        android:text="@string/btn_text_add_exercise"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/btn_prev_workout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:contentDescription="@string/btn_desc_prev_workout"
+            app:srcCompat="@drawable/ic_arrow_back_black_24dp"/>
+
+        <Button
+            android:id="@+id/btn_pick_workouts"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:enabled="false"
+            android:text="@string/btn_cycle_workout"/>
+
+        <ImageButton
+            android:id="@+id/btn_next_workout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:contentDescription="@string/btn_desc_next_workout"
+            app:srcCompat="@drawable/ic_arrow_forward_black_24dp"/>
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,31 @@
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        android:title="@string/pref_category_title_units">
+        <ListPreference
+            android:key="@string/key_weight_units"
+            android:entries="@array/weight_units"
+            android:entryValues="@array/weight_units"
+            android:summary="@string/summary_weight_units"
+            android:title="@string/title_weight_units" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/pref_category_increment_amounts">
+        <!--TODO: Use this when incrementing weight in addSet Activity -->
+        <EditTextPreference
+            android:title="@string/title_increment_weight"
+            android:key="@string/key_increment_weight_amount"
+            android:summary="@string/summary_increment_weight"
+            android:inputType="numberDecimal"/>
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/pref_category_title_db_settings">
+        <Preference android:title="@string/title_db_reset"
+                    android:key="@string/key_db_reset"
+                    android:summary="@string/summary_db_reset"/>
+    </PreferenceCategory>
+
+</PreferenceScreen>
